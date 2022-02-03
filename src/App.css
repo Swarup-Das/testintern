@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+}
+.container:hover {
+  cursor: pointer;
+}
+.title {
+  position: relative;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 4px;
+  background-color: yellow;
+  left: 0%;
+  bottom: 1px;
+  transition: all 0.4s ease-in-out;
+}
+.container:hover .title::after {
+  width: 100%;
+  left: 0;
+}
